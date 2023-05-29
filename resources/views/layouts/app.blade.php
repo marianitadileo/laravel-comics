@@ -17,10 +17,13 @@
 
 <body>
 
-    @extends('layouts.app')
+    @include('partials.header')
 
-    @section('content')
+    <main>
+        @yield('main')
+    </main>
 
+    @include('partials.footer')
 
 </body>
 

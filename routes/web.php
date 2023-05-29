@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = [
+        'dbFooter'=> config('dbFooter'),
+        'dbHeader'=> config('dbHeader'),
+        'dbComics'=> config('dbComics')
+    ];
+    return view('home', $data);
 });
